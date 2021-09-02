@@ -18,3 +18,7 @@
 <p> 3️⃣  - Opções não listadas no menu, devem exibir uma mensagem de erro: "Prato inexistente"; </p>
 <p> 4️⃣  - Se o tempo for 3x maior que o necessário para o prato, o microondas deve exibir a mensagem: “kabumm”; </p>
 <p> 5️⃣  - No final de cada tarefa, o microondas deverá exibir a mensagem: "Prato pronto, bom apetite!!!". </p>
+
+# Imagem demonstrativa do código:
+
+![vscde pi](https://user-images.githubusercontent.com/85362901/131861087-62da864e-956c-4f73-ab45-c8e60b27dc85.png)
