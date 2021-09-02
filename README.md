@@ -10,7 +10,7 @@
 <p>   🍛 Feijão – 12 segundos (padrão);</p>
 <p>   🍫 Brigadeiro – 8 segundos (padrão); </p>
 
-# Atenção! ![image](https://user-images.githubusercontent.com/85362901/131860547-0daa784c-af19-4b0c-add7-4020556cd067.png)
+# Atenção! 🚨
 
 
 <p> 1️⃣  - O usuário poderá alterar o tempo padrão, aumentando ou diminuindo de acordo com sua vontade. Se o tempo informado for maior que 2x o necessário, exibir mensagem que a comida queimou.</p>
