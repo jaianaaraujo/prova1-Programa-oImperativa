@@ -1,48 +1,69 @@
 
-function menu (prato, tempoUsuario) { /* Crio o Menu (função) e aqui dentro coloca as opções com Switch  */
-let tempoPadrao; /* Crio uma variavel para colocar o padrao do tempo */
+function menu(prato, tempoUsuario) {
+    
+    let tempoPadrao;
 
-const opcao = ['Macarrão',  'Brigadeiro',  'feijão',  'Carne',  'Pipoca' ];
-
-    switch(prato){ /* Criei as opções de pratos */
-        case 'Macarrão': /* cada caso é um prato */
-            tempoPadrao = 8;
-            resposta(tempoPadrao, tempoUsuario);
-            break;
-        case 'Brigadeiro':
-            tempoPadrao = 8;
-            resposta(tempoPadrao, tempoUsuario);
-            break;
-        case 'Carne':
-            tempoPadrao = 15;
-            resposta(tempoPadrao, tempoUsuario);
-            break;
-        case 'Feijão':
-            tempoPadrao = 12;
-            resposta(tempoPadrao, tempoUsuario);
-            break;
-        case 'Pipoca':
-            tempoPadrao = 10;
-            resposta(tempoPadrao, tempoUsuario);
-            break; 
+    // Criando um switch para obter opções de prato disponíveis
+    switch (prato) {
         
-            default:
-                return `Prato inexistente, por favor escolha umas dessas opçoes: ${opcao}`
+        case 'Pipoca':
+        case 'pipoca':
+            tempoPadrao = 10;
+            verificarTempo(tempoPadrao, tempoUsuario)
+            break;
 
+        case 'Macarrão':
+        case 'macarrão':
+            tempoPadrao = 8;
+            verificarTempo(tempoPadrao, tempoUsuario)
+            break;
+
+        case 'Carne':
+        case 'carne':
+            tempoPadrao = 15;
+            verificarTempo(tempoPadrao, tempoUsuario)
+            break;
+        
+        case 'Feijão':
+        case 'feijão':
+            tempoPadrao = 12;
+            verificarTempo(tempoPadrao, tempoUsuario)
+            break;
+        
+        case 'Brigadeiro':
+        case 'brigadeiro':
+            tempoPadrao = 8;
+            verificarTempo(tempoPadrao, tempoUsuario)
+            break;
+
+        default:
+            console.log('Prato Inexistente')
+    }
+}
+
+// Função para gerar a lógica do output com base no Tempo e nas condições passadas.
+function verificarTempo(tempoPadrao, tempoUsuario) {
+    
+    if (tempoUsuario < tempoPadrao) {
+        console.log('Tempo insuficiente')
     } 
-    /* Uma função para calcular a resposta */
-  function resposta(tempoPadrao, tempoUsuario){
-    if (tempoUsuario > tempoPadrao * 2)
-    return `A comida queimou, ultrapassou o ${tempoPadrao}`
-}   if(tempoUsuario < tempoPadrao){
-return `tempo insuficiente, tempo ideal é: ${tempoPadrao}`
-}  if(tempoUsuario > tempoPadrao * 3){
-  return `Kabuuuuuum!!!!`
-} else {
-    return `Prato pronto, bom apetite!`
+    else if (tempoUsuario > 3 * tempoPadrao) {
+            console.log('Kabumm')
+    } 
+    else if (tempoUsuario > 2 * tempoPadrao) {
+        console.log('A comida queimou')
+    } 
+    else {
+        console.log('Prato pronto, bom apetite')
+    }
+
 }
-}
 
 
 
-console.log(menu('Brigadeiro', 15)); /* O usuário e o tipo de prato já escolho aqui no console, e será colocado no parametro da função */
+ menu('Feijão', 6)
+ menu('Feijão', 15)
+ menu('Feijão', 24)
+ menu('Feijão', 36)
+ menu('Feijão', 50)
+ menu('dado', 56) 
