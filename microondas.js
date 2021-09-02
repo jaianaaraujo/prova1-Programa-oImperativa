@@ -1,16 +1,16 @@
 
-function menu(prato, tempoUsuario) {
+function menu(prato, tempoUsuario) { /* CRIANDO O MENU  */
     
-    let tempoPadrao;
+    let tempoPadrao; /* CRIANDO A VARIÁVEL PAR ARMAZENAR OS VALORES */
 
-    // Criando um switch para obter opções de prato disponíveis
-    switch (prato) {
+    
+    switch (prato) {  /* PARA SELECIONAR AS OPÇÕES, E POR ISSO UTILIZAMOS O PARÂMETRO PRATO */
         
         case 'Pipoca':
-        case 'pipoca':
-            tempoPadrao = 10;
-            verificarTempo(tempoPadrao, tempoUsuario)
-            break;
+        case 'pipoca': /* PARA ACEITAR COM A LETRA MINUSCULA TAMBÉM */
+            tempoPadrao = 10; /* ATRIBUO O VALOR DE CADA TIPO */
+            verificarTempo(tempoPadrao, tempoUsuario) /* CHAMANDO A FUNÇÃO PARA VERIFICAR OS DADOS */
+            break; 
 
         case 'Macarrão':
         case 'macarrão':
@@ -61,9 +61,9 @@ function verificarTempo(tempoPadrao, tempoUsuario) {
 
 
 
- menu('Feijão', 6)
- menu('Feijão', 15)
- menu('Feijão', 24)
- menu('Feijão', 36)
- menu('Feijão', 50)
- menu('dado', 56) 
+ menu('Feijão', 6);
+ menu('Feijão', 15);
+ menu('Feijão', 24);
+ menu('Feijão', 36);
+ menu('Feijão', 50);
+ menu('dado', 56);
