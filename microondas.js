@@ -1,69 +1,69 @@
 
-function menu(prato, tempoUsuario) { /* CRIANDO O MENU  */
+function menuMicroondas(prato, tempoUsuario) { /* CRIANDO O MENU  */
     
     let tempoPadrao; /* CRIANDO A VARIÁVEL PAR ARMAZENAR OS VALORES */
-
+  
     
     switch (prato) {  /* PARA SELECIONAR AS OPÇÕES, E POR ISSO UTILIZAMOS O PARÂMETRO PRATO */
         
         case 'Pipoca':
         case 'pipoca': /* PARA ACEITAR COM A LETRA MINUSCULA TAMBÉM */
             tempoPadrao = 10; /* ATRIBUO O VALOR DE CADA TIPO */
-            verificarTempo(tempoPadrao, tempoUsuario) /* CHAMANDO A FUNÇÃO PARA VERIFICAR OS DADOS */
+            resultado(tempoPadrao, tempoUsuario) /* CHAMANDO A FUNÇÃO PARA VERIFICAR OS DADOS */
             break; 
 
         case 'Macarrão':
         case 'macarrão':
             tempoPadrao = 8;
-            verificarTempo(tempoPadrao, tempoUsuario)
+            resultado(tempoPadrao, tempoUsuario)
             break;
 
         case 'Carne':
         case 'carne':
             tempoPadrao = 15;
-            verificarTempo(tempoPadrao, tempoUsuario)
+            resultado(tempoPadrao, tempoUsuario)
             break;
         
         case 'Feijão':
         case 'feijão':
             tempoPadrao = 12;
-            verificarTempo(tempoPadrao, tempoUsuario)
+            resultado(tempoPadrao, tempoUsuario)
             break;
         
         case 'Brigadeiro':
         case 'brigadeiro':
             tempoPadrao = 8;
-            verificarTempo(tempoPadrao, tempoUsuario)
+            resultado(tempoPadrao, tempoUsuario)
             break;
 
         default:
-            console.log('Prato Inexistente')
+            console.log('Prato Inexistente. Escolha uma dessas opções: Macarrão, Feijão, Brigadeiro, Carne, Pipoca')
     }
 }
 
-// Função para gerar a lógica do output com base no Tempo e nas condições passadas.
-function verificarTempo(tempoPadrao, tempoUsuario) {
+// FUNCÃO PARA VERIFICAR O TEMPO
+function resultado(tempoPadrao, tempoUsuario) {
     
     if (tempoUsuario < tempoPadrao) {
-        console.log('Tempo insuficiente')
+        console.log('Tempo insuficiente, acrescente mais tempo')
     } 
     else if (tempoUsuario > 3 * tempoPadrao) {
-            console.log('Kabumm')
+            console.log('Kabummmmmm')
     } 
     else if (tempoUsuario > 2 * tempoPadrao) {
-        console.log('A comida queimou')
+        console.log('Poxa, a comida queimou')
     } 
     else {
-        console.log('Prato pronto, bom apetite')
+        console.log('Prato pronto, bom apetite!!!')
     }
 
 }
 
 
 
- menu('Feijão', 6);
- menu('Feijão', 15);
- menu('Feijão', 24);
- menu('Feijão', 36);
- menu('Feijão', 50);
- menu('dado', 56);
+ menuMicroondas('Feijão', 6);
+ menuMicroondas('Feijão', 15);
+ menuMicroondas('Feijão', 24);
+ menuMicroondas('Feijão', 36);
+ menuMicroondas('Feijão', 50);
+ menuMicroondas('dado', 56);
